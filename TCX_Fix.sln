@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "TCX_Fix", "TCX_Fix.pyproj", "{A0D42E86-F0D1-470A-9B00-30BF6632F39D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0D42E86-F0D1-470A-9B00-30BF6632F39D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0D42E86-F0D1-470A-9B00-30BF6632F39D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1761A93-7261-47FC-B937-3DDD0BB686E3}
+	EndGlobalSection
+EndGlobal
