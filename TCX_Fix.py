@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 
 SUFFIX_SIZE = 8
 LAP_SUFFIX_SIZE = 3
-DATE_SIZE = 20
+DATE_SIZE = 24
 
 file = open("input.tcx", "rt")
 output = open("output.tcx", "wt")
@@ -14,15 +14,15 @@ for line in file:
         length = len(line)
         originalTimeText = line[(length-DATE_SIZE-SUFFIX_SIZE):(length-SUFFIX_SIZE)]
         if firstTime:
-            previousTime = datetime.strptime(originalTimeText, "%Y-%m-%dT%H:%M:%SZ") 
+            previousTime = datetime.strptime(originalTimeText, "%Y-%m-%dT%H:%M:%S.000Z") 
             firstTime = False
-        currentTime = datetime.strptime(originalTimeText, "%Y-%m-%dT%H:%M:%SZ") 
+        currentTime = datetime.strptime(originalTimeText, "%Y-%m-%dT%H:%M:%S.000Z") 
         currentTime = currentTime - deltaValue
         deltaTime = currentTime - previousTime
         if deltaTime > timedelta(seconds=1):
             currentTime = previousTime + timedelta(seconds=1)
             deltaValue = deltaValue + deltaTime
-        line = line.replace(originalTimeText, currentTime.strftime("%Y-%m-%dT%H:%M:%SZ"))
+        line = line.replace(originalTimeText, currentTime.strftime("%Y-%m-%dT%H:%M:%S.000Z"))
         previousTime = currentTime
 #    if "<Lap StartTime=" in line and deltaValue > timedelta(seconds=0) :
 #        length = len(line)
